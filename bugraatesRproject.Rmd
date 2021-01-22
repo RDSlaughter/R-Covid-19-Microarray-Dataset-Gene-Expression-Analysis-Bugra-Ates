@@ -1,0 +1,248 @@
+---
+title: "Buğra ATEŞ"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Buğra ATEŞ B1705.090046
+
+```{r}
+library(limma)
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
+ 
+
+ 
+covid_dataset_df <- read.csv("C:/Users/bugra/Desktop/Buğra ATEŞ R Project/covid19-GSE160435")
+#reading dataset and save to covid_dataset as 
+
+```
+
+
+```{r}
+# --- 1.apply normalization ---
+
+covid_dataset_class <- covid_dataset_df[,1]
+#seperating class column to another variable
+
+covid_no_normalize <- covid_dataset_df[, 2:dim(covid_dataset_df)[2]]
+# saving dataset with no "class" column for normalizing
+
+covid_normalized <- normalizeBetweenArrays(covid_no_normalize, method = "quantile")
+# normalizing dataset with "quantile" method in "limma" package
+```
+
+
+# --- 2.draw boxplots before and after normalization ---
+```{r}
+boxplot(covid_no_normalize[,1:30])
+# showing unnormalized dataset with boxplot
+```
+
+```{r}
+boxplot(covid_normalized[,1:30])
+# showing normalized dataset with boxplot
+```
+
+
+# --- 3. find statistically differential expression genes using t-test. ---
+```{r}
+t.test(covid_normalized[,1],covid_normalized[,3],mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F)
+# t-test between virus_N and virus_M
+```
+
+```{r}
+t.test(covid_normalized[,3],covid_normalized[,5],mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F)
+# t-test between virus_M and virus_S
+```
+
+```{r}
+t.test(covid_normalized[,7],covid_normalized[,8],mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F)
+# t-test between virus_ORF7a and virus_ORF3a
+```
+
+```{r}
+t.test(covid_normalized[,8],covid_normalized[,9],mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F)
+# t-test between virus_1_261 and virus_ORF10
+```
+
+```{r}
+t.test(covid_normalized[,2],covid_normalized[,6],mu=0, alt="two.sided", conf=0.95, var.eq=F, paired=F)
+# t-test between virus_ORF1ab and virus_ORF7a
+```
+
+
+# --- 4.show 100 top genes based on adjusted-pvalues ---
+```{r}
+class_factor <- as.factor(covid_dataset_class)
+# encoding vector as a factor
+```
+
+```{r}
+class_numeric<- as.numeric(class_factor)
+# encoding factor as a numeric
+```
+
+```{r}
+dataset_fit <- lmFit(t(covid_no_normalize), class_numeric)
+# fit dataset - t() for replacing places between columns and rows
+```
+
+```{r}
+bayes_fit <- eBayes(dataset_fit)
+# using eBayes method
+```
+
+```{r}
+adjusted_p_values<- topTable(bayes_fit, adjust.method = 'BH', number=100, sort.by = 'p');
+# creating top table based on adjusted p-values
+```
+
+```{r}
+column_names <-row.names(adjusted_p_values)[1:100]
+# taking column names with row.names() function because we replaced the places 
+```
+
+```{r}
+adjusted_p_values_top_100 <- covid_normalized[, column_names]
+# declaring variable with top 100 genes based on adj.p-values and combining with their column names
+```
+
+# ---5. draw heatmap and hierarchical clustering for extracted 100 top genes ---
+```{r}
+adjusted_p_values_top_100_matrix <- t(adjusted_p_values_top_100)
+# replacing column and rows again
+```
+
+```{r}
+colnames(adjusted_p_values_top_100_matrix) <- covid_dataset_class
+# replacing V1-V2....V10 columns with "covid_dataset_class" column that we declared in the beginning
+```
+
+```{r}
+adjusted_p_values_top_100_matrix <- as.matrix(adjusted_p_values_top_100_matrix)
+# converting to matrix to use heatmap()
+```
+
+#----------------------HEATMAP-------------------------
+```{r}
+heatmap_color <- colorRampPalette(brewer.pal(10, "Blues"))(25)
+# declaring color for heatmap
+
+heatmap(adjusted_p_values_top_100_matrix , col=heatmap_color )
+# executing heatmap() function to create heatmap for extracted 100 top genes
+```
+
+#---------------HIERARCHICAL CLUSTERING-----------------
+
+```{r}
+top_100_clusters <- hclust(dist(adjusted_p_values_top_100_matrix)) 
+# doing hierarchical clustering wth hclust() function
+
+plot(top_100_clusters) 
+# visualizing cluster dendrogam plot()
+```
+
+
+# --------- 6.Do any other meaningful statistical analysis. ------------
+
+#-----------------GEOM BOXPLOT BEFORE NORMALIZATION-------------------------------
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_N, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_ORF1ab, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_M, fill=class)) + geom_boxplot
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_ORF8, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_S, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_ORF7a, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_ORF3a, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_1_261, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=virus_ORF10, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_dataset_df, aes(x=class, y=MMP9, fill=class)) + geom_boxplot()
+```
+
+
+#-----------------GEOM BOXPLOT AFTER NORMALIZATION-------------------------------
+```{r}
+class <- covid_dataset_df[,1] 
+# classes for ggplot
+
+covid_class_with_normalized <- data.frame(class,covid_normalized)
+# combining class and normalized data for ggplot
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_N, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_ORF1ab, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_M, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_ORF8, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_S, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_ORF7a, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_ORF3a, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_1_261, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=virus_ORF10, fill=class)) + geom_boxplot()
+```
+
+```{r}
+ggplot(covid_class_with_normalized, aes(x=class, y=MMP9, fill=class)) + geom_boxplot()
+```
+
+# Buğra ATEŞ B1705.090046
+# rm(list = ls()) 
+
