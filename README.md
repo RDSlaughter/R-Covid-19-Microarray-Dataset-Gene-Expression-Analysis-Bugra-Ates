@@ -14,7 +14,6 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ![heatmap](https://user-images.githubusercontent.com/49213911/105470980-4b742d00-5cab-11eb-9cf5-9672d9f75626.png)
 
 ### Cluster Dendrogram Visualization
-![heatmap](https://user-images.githubusercontent.com/49213911/105470980-4b742d00-5cab-11eb-9cf5-9672d9f75626.png)
 ![clustering](https://user-images.githubusercontent.com/49213911/105471044-60e95700-5cab-11eb-8494-2cb7dc32f2cf.png)
 
 ## Required R packages: 
