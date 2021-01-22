@@ -23,7 +23,7 @@ In each heatmap, the columns represent gene expression profile for the patients 
 ### [dplyr](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
 ### [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
 ### [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html)
-
+##
 ## General Information on the Subject 
 ### What is Microarray?
 Microarray is a high-tech technique used for the detection of inclusions and additions that are too small to be observed with a microscope.
