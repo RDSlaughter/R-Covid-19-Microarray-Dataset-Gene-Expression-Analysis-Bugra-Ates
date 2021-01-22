@@ -21,3 +21,7 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ### [dplyr](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
 ### [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
 ### [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html)
+
+# Buğra ATEŞ 
+## https://github.com/RDSlaughter
+## https://www.linkedin.com/in/bugraates/
