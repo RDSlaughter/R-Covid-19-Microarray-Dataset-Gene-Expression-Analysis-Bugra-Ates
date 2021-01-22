@@ -48,10 +48,10 @@ A gene expression profile may be used to find and diagnose a disease or conditio
 ### We want to extract what?
 
 Microarray statistical analysis wants to identify genes with significantly changed gene expression.
-
+##
 ### 9 Statistical Analysis Approaches to Microarray Dataset
 ![approaches](https://user-images.githubusercontent.com/49213911/105473209-e1a95280-5cad-11eb-8e49-bf77c0cebcf7.png)
-
+##
 ### T-test
 
 The t test is a simple, statistically based method for detecting differentially expressed genes . In replicated experiments, the error variance  can be estimated for each gene from the log ratios, and a standard t test can be conducted for each gene; the resulting t statistic can be used to determine which genes are significantly differentially expressed.
