@@ -11,6 +11,8 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ![afternormalize](https://user-images.githubusercontent.com/49213911/105470924-38615d00-5cab-11eb-9b8b-ba1c84d03844.png)
 
 ### Heatmap Visualization
+In each heatmap, the columns represent gene expression profile for the patients while the rows represent the expression profiles for each gene across all patients.
+
 ![heatmap](https://user-images.githubusercontent.com/49213911/105470980-4b742d00-5cab-11eb-9cf5-9672d9f75626.png)
 
 ### Cluster Dendrogram Visualization
@@ -30,7 +32,22 @@ Micorarray studies yield a genomic profile based on thousands of gene expression
 ![whdoweuse](https://user-images.githubusercontent.com/49213911/105472702-5039e080-5cad-11eb-956d-ef96ff954e32.png)
 ### What is gene expression profile?
 In the field of molecular biology, gene expression profile is the measurement of the activity of thousands of genes at once to create a global picture of cellular function. These profiles can, for example, distinguish between actively dividing cells or show how the cells respond to a particular treatment.
+
 ![geneexpression](https://user-images.githubusercontent.com/49213911/105472800-66e03780-5cad-11eb-918e-2afa14a5d610.jpg)
+
+### Why do we use gene expression profile?
+A gene expression profile may be used to find and diagnose a disease or condition or to see how well the body responds to treatment.
+
+### What is the aim of doing statistical analysis on Microarray Datasets?
+1- Identify the changes in gene sequences that are most often associated with particular diseases
+
+2- Determine how often individuals with a particular mutation actually develop breast cancer.
+
+3- Microarrays can also be used to study the extent to which certain genes are turned on or off in cells and tissues.
+
+### We want to extract what?
+
+Microarray statistical analysis wants to identify genes with significantly changed gene expression.
 
 
 
