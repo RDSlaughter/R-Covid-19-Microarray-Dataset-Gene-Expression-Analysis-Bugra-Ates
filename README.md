@@ -16,7 +16,7 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ### Cluster Dendrogram Visualization
 ![clustering](https://user-images.githubusercontent.com/49213911/105471044-60e95700-5cab-11eb-8494-2cb7dc32f2cf.png)
 
-### Required R packages: 
+## Required R packages: 
 ### [limma](https://bioconductor.org/packages/release/bioc/html/limma.html)
 ### [dplyr](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
 ### [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
