@@ -22,7 +22,7 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ### [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
 ### [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html)
 
-# Resources
+## Resources
 #### https://pubmed.ncbi.nlm.nih.gov/12844246/
 #### https://wiki.bits.vib.be/index.php/Analyze_your_own_microarray_data_in_R/Bioconductor#Normalization_of_microarray_data
 #### https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/
@@ -36,6 +36,6 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 #### http://www.sthda.com/english/wiki/one-way-anova-test-in-r
 
 
-# Buğra ATEŞ 
+## Buğra ATEŞ 
 ## https://github.com/RDSlaughter
 ## https://www.linkedin.com/in/bugraates/
