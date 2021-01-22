@@ -35,7 +35,7 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 #### https://www.datanovia.com/en/blog/how-to-normalize-and-standardize-data-in-r-for-great-heatmap-visualization/
 #### http://www.sthda.com/english/wiki/one-way-anova-test-in-r
 
-
+![rd-white-logo](https://user-images.githubusercontent.com/49213911/105472234-b8d48d80-5cac-11eb-83db-821526f15872.png)
 ## Buğra ATEŞ 
 ## https://github.com/RDSlaughter
 ## https://www.linkedin.com/in/bugraates/
