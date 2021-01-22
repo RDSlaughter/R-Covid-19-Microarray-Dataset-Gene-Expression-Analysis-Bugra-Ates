@@ -3,7 +3,7 @@
 
 In this R project I applied some statistical methods to analize covid-19 microarray dataset. 
 ## Required R packages: 
-<a href="www.youtube.com" target="_blank">De>
+[limma](https://bioconductor.org/packages/release/bioc/html/limma.html)
 ### dplyr
 ### ggplot2
 ### RColorBrewer
