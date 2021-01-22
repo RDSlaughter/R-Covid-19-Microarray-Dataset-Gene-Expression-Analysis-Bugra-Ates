@@ -49,6 +49,75 @@ A gene expression profile may be used to find and diagnose a disease or conditio
 
 Microarray statistical analysis wants to identify genes with significantly changed gene expression.
 
+### 9 Statistical Analysis Approaches to Microarray Dataset
+
+![approaches](https://user-images.githubusercontent.com/49213911/105473209-e1a95280-5cad-11eb-8e49-bf77c0cebcf7.png)
+
+### T-test
+
+The t test is a simple, statistically based method for detecting differentially expressed genes . In replicated experiments, the error variance  can be estimated for each gene from the log ratios, and a standard t test can be conducted for each gene; the resulting t statistic can be used to determine which genes are significantly differentially expressed.
+
+### BoxPlot
+
+Box plots allow you to assess if the scale and distribution of the data on different arrays is comparable. Differences in shape or center of the boxes indicate that normalization of the data is required.
+
+### Normalization
+
+Normalization is the process of removing some sources of variation which affect the measured gene expression levels. Normalization plays an important role in the earlier stage of microarray data analysis. The subsequent analysis results are highly dependent on normalization.
+
+The purpose of normalization is to make the intensities for features that are not differentially expressed similar across the arrays.
+Systematic differences between the samples that are due to noise rather than true biological variability should be removed in order to make biologically meaningfull conclusions about the data.
+
+![beforeafterbox](https://user-images.githubusercontent.com/49213911/105473321-0c93a680-5cae-11eb-9739-bb62a5eb031b.png)
+
+### ANOVA
+
+Usually the experimenter wants to know which genes  are actively regulated during treatment in two cell lines, or  wants some criterion for selecting those that are differentially  regulated among groups. These questions belong in the  tradition of analysis of variance (ANOVA).
+
+In health research, effect size can be used in statistical techniques such as regression models, multi-directional analysis of variance (ANOVA) or multivariate analysis of variance (MANOVA).
+
+#### Volcano Plot
+
+The ‘volcano plot’ arranges genes along dimensions of biological and statistical significance. The researcher can then make judgements about the most promising candidates for follow-up studies, by trading off both these criteria by eye.
+
+![volcanoplot](https://user-images.githubusercontent.com/49213911/105473441-2df49280-5cae-11eb-8009-e8878409092b.png)
+
+### P-Value
+
+The P-value can serve as a probability measure to select differentially expressed genes from a pre-specified significance level (cutoff threshold). 
+So whether there is a difference between genes, we can turn it into a probability measure.
+
+### Permutation Testing
+
+Permutation testing is an approach that is widely applicable  and copes with distributions that are far from Normal.
+This  approach is particularly useful for microarray studies because  it can be easily adapted to estimate significance levels for many  genes in parallel.
+
+A permutation-based p-value tells how rare that test statistic  is, among all the random partitions of the actual samples into  pseudo-treatment and pseudo-control groups.
+
+### Empirical Bayes Methods
+
+Empirical Bayes methods are procedures for statistical inference in which the prior distribution is estimated from the data. This approach stands in contrast to standard Bayesian methods, for which the prior distribution is fixed before any data are observed.
+Bayesian approaches make assumptions about the parameters  to be estimated (such as the differences between gene levels in  treatment and control groups).
+
+### MMM(Mixture Model Method)
+
+An important and common task in analyzing microarray data is to identify genes with altered expression under two experimental conditions. We propose a nonparametric statistical approach, called the mixture model method (MMM), to handle the problem when there are a small number of replicates under each experimental condition. Specifically, we propose estimating the distributions of a t -type test statistic and its null statistic using finite normal mixture models. 
+
+### How can we apply stastical analysis to microarray data?
+
+1-Reading raw data
+
+2-Quality Check
+
+3-Normalization 
+
+4-Filtering 
+
+5-Selection of differentially expressed genes
+
+6-Comparison of selected lists
+
+7-Analysis of Biological Significance.
 
 
 ## Resources
