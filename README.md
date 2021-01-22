@@ -22,6 +22,18 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ### [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html)
 ### [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html)
 
+## General Information on the Subject 
+### What is Microarray?
+Microarray is a high-tech technique used for the detection of inclusions and additions that are too small to be observed with a microscope.
+### Why do we use Microarray?
+Micorarray studies yield a genomic profile based on thousands of gene expressions for each patient.
+![whdoweuse](https://user-images.githubusercontent.com/49213911/105472702-5039e080-5cad-11eb-956d-ef96ff954e32.png)
+### What is gene expression profile?
+In the field of molecular biology, gene expression profile is the measurement of the activity of thousands of genes at once to create a global picture of cellular function. These profiles can, for example, distinguish between actively dividing cells or show how the cells respond to a particular treatment.
+![geneexpression](https://user-images.githubusercontent.com/49213911/105472800-66e03780-5cad-11eb-918e-2afa14a5d610.jpg)
+
+
+
 ## Resources
 #### https://pubmed.ncbi.nlm.nih.gov/12844246/
 #### https://wiki.bits.vib.be/index.php/Analyze_your_own_microarray_data_in_R/Bioconductor#Normalization_of_microarray_data
@@ -39,5 +51,3 @@ I explained all the steps and code lines in .Rmd file. I made it markdown file ,
 ## Buğra ATEŞ 
 ## https://github.com/RDSlaughter
 ## https://www.linkedin.com/in/bugraates/
-
-![rd-white-logo](https://user-images.githubusercontent.com/49213911/105472234-b8d48d80-5cac-11eb-83db-821526f15872.png)
