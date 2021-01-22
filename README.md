@@ -50,7 +50,6 @@ A gene expression profile may be used to find and diagnose a disease or conditio
 Microarray statistical analysis wants to identify genes with significantly changed gene expression.
 
 ### 9 Statistical Analysis Approaches to Microarray Dataset
-
 ![approaches](https://user-images.githubusercontent.com/49213911/105473209-e1a95280-5cad-11eb-8e49-bf77c0cebcf7.png)
 
 ### T-test
