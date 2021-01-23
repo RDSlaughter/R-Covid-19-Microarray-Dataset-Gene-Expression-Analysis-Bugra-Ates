@@ -76,7 +76,7 @@ Usually the experimenter wants to know which genes  are actively regulated durin
 
 In health research, effect size can be used in statistical techniques such as regression models, multi-directional analysis of variance (ANOVA) or multivariate analysis of variance (MANOVA).
 
-#### Volcano Plot
+### Volcano Plot
 
 The ‘volcano plot’ arranges genes along dimensions of biological and statistical significance. The researcher can then make judgements about the most promising candidates for follow-up studies, by trading off both these criteria by eye.
 
