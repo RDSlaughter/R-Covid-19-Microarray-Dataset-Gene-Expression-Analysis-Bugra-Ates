@@ -119,6 +119,8 @@ An important and common task in analyzing microarray data is to identify genes w
 
 7-Analysis of Biological Significance.
 
+##
+
 ## Türkçe
 Bu R projesinde covid-19 mikroarray veri setini analiz etmek için bazı istatistiksel yöntemler uyguladım.
 .Rmd dosyasındaki tüm adımları ve kod satırlarını anlattım. Markdown dosyası yaptım, böylece her işlemi görebilirsin.
@@ -210,7 +212,7 @@ Yani genler arasında bir fark olsa da, bunu bir olasılık ölçüsüne dönü�
 
 Permütasyon testi, yaygın olarak uygulanabilen ve Normalden uzak dağılımlarla başa çıkan bir yaklaşımdır.
 Bu yaklaşım özellikle mikrodizi çalışmaları için kullanışlıdır çünkü paralel olarak birçok gen için önem seviyelerini tahmin etmek için kolayca uyarlanabilir.
-A permutation-based p-value tells how rare that test statistic  is, among all the random partitions of the actual samples into  pseudo-treatment and pseudo-control groups.
+Permütasyona dayalı bir p-değeri, gerçek örneklerin tüm rastgele bölümleri arasında sözde muamele ve sözde kontrol gruplarına ait test istatistiğinin ne kadar nadir olduğunu söyler.
 
 ### Ampirik Bayes Yöntemleri
 
