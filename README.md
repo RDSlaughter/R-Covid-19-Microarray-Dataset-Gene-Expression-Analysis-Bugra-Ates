@@ -1,5 +1,5 @@
 # Statistical Analysis on Covid-19 Microarray Dataset with R
-## Buğra ATEŞ 17.01.2021
+## Buğra ATEŞ 17.01.2021 ( ENGLISH - TÜRKÇE )
 ## English
 In this R project I applied some statistical methods to analize covid-19 microarray dataset. 
 I explained all the steps and code lines in .Rmd file. I made it markdown file , so you can see the each processes.
@@ -169,82 +169,75 @@ Bir hastalık veya durumu bulmak ve teşhis etmek veya vücudun tedaviye ne kada
 
 Mikroarray istatistiksel analizi, önemli ölçüde değiştirilmiş gen ifadesine sahip genleri tanımlamak ister.
 ##
-### 9 Statistical Analysis Approaches to Microarray Dataset
+### Microarray Veri Kümesine 9 İstatistiksel Analiz Yaklaşımı
 ![approaches](https://user-images.githubusercontent.com/49213911/105473209-e1a95280-5cad-11eb-8e49-bf77c0cebcf7.png)
 ##
 ### T-test
 
-The t test is a simple, statistically based method for detecting differentially expressed genes . In replicated experiments, the error variance  can be estimated for each gene from the log ratios, and a standard t test can be conducted for each gene; the resulting t statistic can be used to determine which genes are significantly differentially expressed.
+T testi, farklı şekilde ifade edilen genleri tespit etmek için basit, istatistiksel temelli bir yöntemdir. Yinelenen deneylerde, hata varyansı, log oranlarından her gen için tahmin edilebilir ve her gen için standart bir t testi yapılabilir; elde edilen t istatistiği, hangi genlerin önemli ölçüde farklı şekilde ifade edildiğini belirlemek için kullanılabilir.
 
 ### BoxPlot
 
-Box plots allow you to assess if the scale and distribution of the data on different arrays is comparable. Differences in shape or center of the boxes indicate that normalization of the data is required.
+Kutu grafikleri, farklı dizilerdeki verilerin ölçeğinin ve dağılımının karşılaştırılabilir olup olmadığını değerlendirmenize olanak tanır. Kutuların şekil veya merkezlerindeki farklılıklar, verilerin normalleştirilmesi gerektiğini gösterir.
 
-### Normalization
+### Normalizasyon
 
-Normalization is the process of removing some sources of variation which affect the measured gene expression levels. Normalization plays an important role in the earlier stage of microarray data analysis. The subsequent analysis results are highly dependent on normalization.
+Normalizasyon, ölçülen gen ekspresyon seviyelerini etkileyen bazı varyasyon kaynaklarını ortadan kaldırma işlemidir. Normalleştirme, mikrodizi veri analizinin erken aşamasında önemli bir rol oynar. Sonraki analiz sonuçları büyük ölçüde normalleşmeye bağlıdır.
 
-The purpose of normalization is to make the intensities for features that are not differentially expressed similar across the arrays.
-Systematic differences between the samples that are due to noise rather than true biological variability should be removed in order to make biologically meaningfull conclusions about the data.
+Normalleştirmenin amacı, farklı şekilde ifade edilmeyen özelliklerin yoğunluklarını diziler arasında benzer hale getirmektir.
+Veriler hakkında biyolojik olarak anlamlı sonuçlara varmak için numuneler arasındaki gerçek biyolojik değişkenlikten ziyade gürültüden kaynaklanan sistematik farklılıklar ortadan kaldırılmalıdır.
 
 ![beforeafterbox](https://user-images.githubusercontent.com/49213911/105473321-0c93a680-5cae-11eb-9739-bb62a5eb031b.png)
 
 ### ANOVA
 
-Usually the experimenter wants to know which genes  are actively regulated during treatment in two cell lines, or  wants some criterion for selecting those that are differentially  regulated among groups. These questions belong in the  tradition of analysis of variance (ANOVA).
+Genellikle deneyci, iki hücre hattında tedavi sırasında hangi genlerin aktif olarak düzenlendiğini bilmek ister veya gruplar arasında farklı şekilde düzenlenmiş olanları seçmek için bazı kriterler ister. Bu sorular varyans analizi geleneğine (ANOVA) aittir.
 
-In health research, effect size can be used in statistical techniques such as regression models, multi-directional analysis of variance (ANOVA) or multivariate analysis of variance (MANOVA).
+Sağlık araştırmalarında, etki büyüklüğü regresyon modelleri, çok yönlü varyans analizi (ANOVA) veya çok değişkenli varyans analizi (MANOVA) gibi istatistiksel tekniklerde kullanılabilir.
 
-### Volcano Plot
+### Volkan Grafiği
 
-The ‘volcano plot’ arranges genes along dimensions of biological and statistical significance. The researcher can then make judgements about the most promising candidates for follow-up studies, by trading off both these criteria by eye.
+"Volkan grafiği", genleri biyolojik ve istatistiksel açıdan önemli boyutlara göre düzenler. Araştırmacı daha sonra, bu iki kriteri de göze alarak, takip çalışmaları için en umut verici adaylar hakkında yargılarda bulunabilir.
 
 ![volcanoplot](https://user-images.githubusercontent.com/49213911/105473441-2df49280-5cae-11eb-8009-e8878409092b.png)
 
-### P-Value
+### P-Değeri
 
-The P-value can serve as a probability measure to select differentially expressed genes from a pre-specified significance level (cutoff threshold). 
-So whether there is a difference between genes, we can turn it into a probability measure.
+P değeri, önceden belirlenmiş bir önem seviyesinden (kesme eşiği) farklı şekilde ifade edilen genleri seçmek için bir olasılık ölçüsü olarak hizmet edebilir.
+Yani genler arasında bir fark olsa da, bunu bir olasılık ölçüsüne dönüştürebiliriz.
 
-### Permutation Testing
+### Permütasyon Testi
 
-Permutation testing is an approach that is widely applicable  and copes with distributions that are far from Normal.
-This  approach is particularly useful for microarray studies because  it can be easily adapted to estimate significance levels for many  genes in parallel.
-
+Permütasyon testi, yaygın olarak uygulanabilen ve Normalden uzak dağılımlarla başa çıkan bir yaklaşımdır.
+Bu yaklaşım özellikle mikrodizi çalışmaları için kullanışlıdır çünkü paralel olarak birçok gen için önem seviyelerini tahmin etmek için kolayca uyarlanabilir.
 A permutation-based p-value tells how rare that test statistic  is, among all the random partitions of the actual samples into  pseudo-treatment and pseudo-control groups.
 
-### Empirical Bayes Methods
+### Ampirik Bayes Yöntemleri
 
-Empirical Bayes methods are procedures for statistical inference in which the prior distribution is estimated from the data. This approach stands in contrast to standard Bayesian methods, for which the prior distribution is fixed before any data are observed.
-Bayesian approaches make assumptions about the parameters  to be estimated (such as the differences between gene levels in  treatment and control groups).
+Ampirik Bayes yöntemleri, önceki dağılımın verilerden tahmin edildiği istatistiksel çıkarım prosedürleridir. Bu yaklaşım, herhangi bir veri gözlemlenmeden önce önceki dağıtımın sabitlendiği standart Bayes yöntemlerinin aksine durmaktadır.
+Bayesci yaklaşımlar, tahmin edilecek parametreler hakkında varsayımlar yapar (tedavi ve kontrol gruplarındaki gen seviyeleri arasındaki farklar gibi).
 
-### MMM(Mixture Model Method)
+### MMM (Karışım Modeli Yöntemi)
 
-An important and common task in analyzing microarray data is to identify genes with altered expression under two experimental conditions. We propose a nonparametric statistical approach, called the mixture model method (MMM), to handle the problem when there are a small number of replicates under each experimental condition. Specifically, we propose estimating the distributions of a t -type test statistic and its null statistic using finite normal mixture models. 
+Mikrodizi verilerini analiz etmedeki önemli ve yaygın bir görev, iki deneysel koşul altında ekspresyonu değiştirilmiş genleri belirlemektir. Her deneysel koşul altında az sayıda tekrar olduğunda sorunu çözmek için karışım modeli yöntemi (MMM) adı verilen parametrik olmayan bir istatistiksel yaklaşım öneriyoruz. Spesifik olarak, sonlu normal karışım modelleri kullanarak bir t-tipi test istatistiğinin ve boş istatistiğinin dağılımlarının tahmin edilmesini öneriyoruz.
 
-### How can we apply stastical analysis to microarray data?
+### Mikroarray verilerine istatistiksel analizi nasıl uygulayabiliriz?
 
-1-Reading raw data
+1-Ham verileri okuma
 
-2-Quality Check
+2-Kalite Kontrol
 
-3-Normalization 
+3-Normalleştirme
 
-4-Filtering 
+4-Filtreleme
 
-5-Selection of differentially expressed genes
+5-Farklı şekilde ifade edilen genlerin seçimi
 
-6-Comparison of selected lists
+6-Seçilen listelerin karşılaştırılması
 
-7-Analysis of Biological Significance.
+7-Biyolojik Önem Analizi.
 
-
-
-
-
-
-
-## Resources
+## Resources - Kaynaklar
 #### https://pubmed.ncbi.nlm.nih.gov/12844246/
 #### https://wiki.bits.vib.be/index.php/Analyze_your_own_microarray_data_in_R/Bioconductor#Normalization_of_microarray_data
 #### https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/
