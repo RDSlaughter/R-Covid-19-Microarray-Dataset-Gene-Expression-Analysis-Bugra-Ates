@@ -239,6 +239,7 @@ Mikrodizi verilerini analiz etmedeki önemli ve yaygın bir görev, iki deneysel
 
 7-Biyolojik Önem Analizi.
 
+
 ## Resources - Kaynaklar
 #### https://pubmed.ncbi.nlm.nih.gov/12844246/
 #### https://wiki.bits.vib.be/index.php/Analyze_your_own_microarray_data_in_R/Bioconductor#Normalization_of_microarray_data
