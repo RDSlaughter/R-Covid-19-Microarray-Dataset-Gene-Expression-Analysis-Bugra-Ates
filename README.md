@@ -256,4 +256,4 @@ Mikrodizi verilerini analiz etmedeki önemli ve yaygın bir görev, iki deneysel
 ##
 ## Buğra ATEŞ 
 ## https://github.com/RDSlaughter
-## https://www.linkedin.com/in/bugraates/
+
