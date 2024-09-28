@@ -1,5 +1,5 @@
 # Statistical Analysis on Covid-19 Microarray Dataset with R
-## Buğra ATEŞ 17.01.2021 ( ENGLISH - TÜRKÇE )
+## Buğra 17.01.2021 ( ENGLISH - TÜRKÇE )
 ## English
 In this R project I applied some statistical methods to analize covid-19 microarray dataset. 
 I explained all the steps and code lines in .Rmd file. I made it markdown file , so you can see the each processes.
